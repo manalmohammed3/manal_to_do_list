@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="datamodel"
+            type="com.example.manal_to_do_list.datamodel"
+
+            />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="257dp"
+        android:backgroundTint="#9DCEE4"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="1dp"
+        app:cardUseCompatPadding="true"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="253dp">
+
+
+            <ImageView
+                android:id="@+id/isDone"
+                android:layout_width="36dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="45dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/Discript"
+                app:layout_constraintTop_toBottomOf="@+id/deletebtn"
+
+            <Button
+                android:id="@+id/deletebtn"
+                android:layout_width="48dp"
+                android:layout_height="49dp"
+                android:layout_alignEnd="@+id/TaskTitle"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="68dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/Discript" />
+
+            <Button
+                android:id="@+id/TaskTitle"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="329dp"
+                android:layout_height="71dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="#76AAC1"
+                android:text="Task Title"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="188dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/Discript"
+                android:layout_width="286dp"
+                android:layout_height="102dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="4dp"
+                android:backgroundTint="#FF76AAC1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date"
+                app:layout_constraintVertical_bias="0.454" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/Discript"
+                android:layout_below="@+id/TaskTitle"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_toStartOf="@+id/checkBox"
+                android:backgroundTint="#FF76AAC1"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TaskTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</layout>

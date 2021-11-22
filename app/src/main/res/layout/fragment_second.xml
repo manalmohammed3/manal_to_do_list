@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/edit_ask"
+                android:layout_width="280dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/doneCheck"
+                android:layout_marginTop="16dp"
+                android:onClick="@{() -> secondFragment.addTask()}"
+                android:text="Add Task"
+                app:layout_constraintEnd_toEndOf="@+id/doneCheck"
+                app:layout_constraintHorizontal_bias="0.133"
+                app:layout_constraintStart_toStartOf="@+id/doneCheck"
+                app:layout_constraintTop_toBottomOf="@+id/doneCheck"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/decript"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="330dp"
+                android:layout_height="188dp"
+                android:layout_below="@+id/titletask"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:hint="Decript"
+                app:layout_constraintEnd_toEndOf="@+id/titletask"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/titletask"
+                app:layout_constraintTop_toBottomOf="@+id/titletask">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/decript1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/doneCheck"
+                android:layout_width="237dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+
+                android:layout_marginTop="452dp"
+                android:text="Done"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titletask"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="330dp"
+                android:layout_height="78dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titletask1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Title Text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="266dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Add new Task"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/titletask"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/setDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="247dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/doneCheck"
+                app:layout_constraintEnd_toStartOf="@+id/dataPicker"
+                app:layout_constraintHorizontal_bias="0.677"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:startIconDrawable="@drawable/calendar"
+                tools:text="@tools:sample/date/ddmmyy">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setDate1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+
+                android:id="@+id/dataPicker"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="65dp"
+                android:layout_height="58dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="68dp"
+                android:gravity="center"
+                android:onClick="@{() -> secondragment.showDatePicker()}"
+                app:icon="@android:drawable/ic_menu_month"
+                app:layout_constraintBottom_toTopOf="@+id/edit_ask"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
+</layout>
